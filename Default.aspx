@@ -63,7 +63,7 @@
         </div>
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultDataSource %>" SelectCommand="
-                select * from RSS_message where RM_Time<=getDate() order by RM_ID desc
+                select top 5 * from RSS_message where RM_Time<=getDate() order by RM_ID desc
             ">
         </asp:SqlDataSource>
 </form>

@@ -103,7 +103,7 @@ namespace GetOtherNewsRss
         {
             var cmd = new SqlCommand();
             cmd.CommandText = @"
-                select * from RSS_message where RM_Time<=getDate() order by RM_ID desc
+                select top 5 * from RSS_message where RM_Time<=getDate() order by RM_ID desc
             ";
             DataTable theTable = Persister.Execute(cmd);
 
