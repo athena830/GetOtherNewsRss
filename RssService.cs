@@ -18,7 +18,7 @@ namespace GetOtherNewsRss
         {
             try
             {
-                int Interval = 60;
+                int Interval = 30;//30*1000是30秒
                 myTimer = new System.Timers.Timer(Interval * 1000);
                 myTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
                 myTimer.Enabled = true;
